@@ -1,0 +1,847 @@
+
+/* CONFIGURACION GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #0b0b18;
+    color: #f5f3ff;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* TIPOGRAFIA GENERAL */
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 1px;
+}
+
+
+/* ENCABEZADO */
+
+header {
+    background-color: #111126;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 2px solid #713bba;
+}
+
+header h1 {
+    color: #b98aff;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+
+/* MENU DE NAVEGACION */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e0d9ff;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #55c7ff;
+}
+
+
+/* SECCIONES GENERALES */
+
+section {
+    padding: 90px 10%;
+    min-height: 300px;
+    border-bottom: 1px solid #282448;
+}
+
+section h2 {
+    color: #b98aff;
+    font-size: 38px;
+    margin-bottom: 30px;
+    border-left: 5px solid #55c7ff;
+    padding-left: 18px;
+}
+
+section p {
+    color: #d2cfe8;
+    font-size: 19px;
+    line-height: 1.9;
+    max-width: 900px;
+}
+
+
+/* PRESENTACION */
+
+#presentacion {
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 60px 10%;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 10, 35, 0.55),
+            rgba(12, 15, 40, 0.70)
+        ),
+        url("imagenes/humo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-bottom: 2px solid #713bba;
+}
+
+/* TITULO PRINCIPAL */
+
+#presentacion h2 {
+    font-family: "Segoe UI", sans-serif;
+    color: #c49aff;
+    font-size: 25px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    border: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+/* NOMBRE */
+
+#presentacion h3 {
+    font-family: Georgia, serif;
+    color: #ffffff;
+    font-size: clamp(32px, 5vw, 60px);
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 10px #9b65ff,
+        0 0 25px #713bba,
+        0 0 45px #2856a8;
+}
+
+/* DESCRIPCION */
+
+#presentacion p {
+    color: #e2dcff;
+    font-size: 21px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* SOBRE MI */
+
+#sobre-mi {
+    background-color: #111126;
+    padding: 90px 10%;
+}
+
+/* CONTENEDORES DE CADA APARTADO */
+
+.sobre-mi-bloque {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+    width: 100%;
+
+    margin: 60px 0;
+    padding: 35px;
+
+    background: linear-gradient(
+        135deg,
+        #171632,
+        #151d38
+    );
+
+    border: 1px solid #39305e;
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+.sobre-mi-bloque:hover {
+    border-color: #8053c9;
+
+    box-shadow:
+        0 0 20px #713bba33;
+}
+
+/* ALTERNAR POSICION DE LOS GIF */
+
+/* SEGUNDO APARTADO: FORMACION */
+.sobre-mi-bloque:nth-of-type(2) {
+    flex-direction: row-reverse;
+}
+
+/* TERCER APARTADO: OBJETIVOS */
+.sobre-mi-bloque:nth-of-type(3) {
+    flex-direction: row;
+}
+
+/* TEXTO */
+
+.sobre-mi-texto {
+    flex: 1;
+}
+
+.sobre-mi-texto h3 {
+    color: #55c7ff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.sobre-mi-texto p {
+    color: #d2cfe8;
+    font-size: 19px;
+    line-height: 1.9;
+    max-width: 650px;
+}
+
+/* GIF */
+
+.sobre-mi-gif {
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-mi-gif img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 15px;
+
+    filter: drop-shadow(
+        0 0 12px #713bba
+    );
+
+    transition: 0.3s;
+}
+
+/* EFECTO DEL GIF */
+
+.sobre-mi-gif img:hover {
+    transform: scale(1.05);
+
+    filter: drop-shadow(
+        0 0 20px #55c7ff
+    );
+}
+
+
+/* ADAPTACION PARA TABLETS */
+
+@media (max-width: 900px) {
+
+    .sobre-mi-bloque {
+        gap: 30px;
+        padding: 25px;
+    }
+
+    .sobre-mi-gif img {
+        width: 240px;
+    }
+
+    .sobre-mi-texto h3 {
+        font-size: 26px;
+    }
+
+    .sobre-mi-texto p {
+        font-size: 17px;
+    }
+
+}
+
+
+/* ADAPTACION PARA CELULARES */
+
+@media (max-width: 600px) {
+
+    #sobre-mi {
+        padding: 50px 7%;
+    }
+
+    .sobre-mi-bloque,
+    .sobre-mi-bloque:nth-of-type(3) {
+        flex-direction: column;
+        text-align: center;
+
+        gap: 25px;
+        margin: 35px 0;
+        padding: 25px 20px;
+    }
+
+    .sobre-mi-texto h3 {
+        font-size: 25px;
+    }
+
+    .sobre-mi-texto p {
+        font-size: 16px;
+    }
+
+    .sobre-mi-gif img {
+        width: 220px;
+        max-width: 100%;
+    }
+
+}
+
+/* PROYECTOS */
+
+#proyectos {
+    background-color: #0e1022;
+}
+
+/* CONTENEDOR DE CADA PROYECTO */
+
+.proyecto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+
+    background: linear-gradient(
+        135deg,
+        #211942,
+        #172b4c
+    );
+
+    padding: 30px;
+    margin: 25px 0;
+
+    border-radius: 15px;
+    border: 1px solid #7044b8;
+
+    transition: 0.3s;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+.proyecto:hover {
+    transform: translateY(-5px);
+    border-color: #55c7ff;
+
+    box-shadow: 0 5px 20px #713bba55;
+}
+
+/* TEXTO */
+
+.proyecto-texto {
+    flex: 1;
+}
+
+.proyecto h3 {
+    color: #55c7ff;
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+/* IMAGEN */
+
+.proyecto-imagen {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.proyecto-imagen img {
+    width: 280px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+    border: 1px solid #8053c9;
+
+    transition: 0.3s;
+}
+
+.proyecto-imagen img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #713bba88;
+}
+/* VIDEO DE PROYECTOS */
+
+.proyecto-imagen video {
+    width: 280px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+    border: 1px solid #8053c9;
+
+    transition: 0.3s;
+}
+
+.proyecto-imagen video:hover {
+    transform: scale(1.05);
+
+    box-shadow: 0 0 15px #713bba88;
+}
+
+/* HABILIDADES */
+
+#habilidades {
+    background-color: #111126;
+}
+
+#habilidades ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#habilidades li {
+    background-color: #29204a;
+    color: #c8a8ff;
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: 1px solid #8053c9;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+/* CONTACTOS */
+
+
+/* CONTACTOS */
+
+#contactos {
+    background: linear-gradient(
+        135deg,
+        #111126,
+        #171238,
+        #17265a
+    );
+
+    padding: 90px 8%;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.contactos-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* INFORMACION DE CONTACTO */
+
+.contactos-info h2 {
+    margin-bottom: 25px;
+}
+
+.contactos-info h3 {
+    color: #55c7ff;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contactos-info > p {
+    margin-bottom: 30px;
+}
+
+/* DATOS DE CONTACTO */
+
+.contacto-dato {
+    margin: 22px 0;
+}
+
+.contacto-dato span {
+    color: #b98aff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contacto-dato p {
+    font-size: 17px;
+    margin-top: 3px;
+}
+
+
+/* FORMULARIO */
+
+.contactos-formulario {
+    background: linear-gradient(
+        145deg,
+        #1b1938,
+        #11182e
+    );
+
+    padding: 35px;
+    border-radius: 18px;
+
+    border: 1px solid #7044b8;
+
+    box-shadow:
+        0 0 20px #713bba33,
+        0 10px 35px #00000055;
+}
+
+.contactos-formulario h3 {
+    color: #b98aff;
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* ETIQUETAS */
+
+.contactos-formulario label {
+    display: block;
+    color: #d2cfe8;
+    font-size: 16px;
+    margin-bottom: 7px;
+    margin-top: 15px;
+}
+
+/* CAMPOS DE TEXTO */
+
+.contactos-formulario input,
+.contactos-formulario textarea {
+    width: 100%;
+    padding: 14px;
+
+    background-color: #211e3d;
+
+    border: 1px solid #57417f;
+    border-radius: 9px;
+
+    color: #ffffff;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+/* EFECTO AL SELECCIONAR UN CAMPO */
+
+.contactos-formulario input:focus,
+.contactos-formulario textarea:focus {
+    border-color: #55c7ff;
+
+    box-shadow:
+        0 0 8px #55c7ff55;
+}
+
+/* PLACEHOLDER */
+
+.contactos-formulario input::placeholder,
+.contactos-formulario textarea::placeholder {
+    color: #9991b5;
+}
+
+/* AREA DEL MENSAJE */
+
+.contactos-formulario textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* BOTON ENVIAR */
+
+.contactos-formulario button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+
+    background: linear-gradient(
+        90deg,
+        #713bba,
+        #365cb5
+    );
+
+    border: none;
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contactos-formulario button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 20px #713bba88;
+
+    background: linear-gradient(
+        90deg,
+        #9255e5,
+        #4288d8
+    );
+}
+
+
+/* ADAPTACION PARA TABLETS */
+
+@media (max-width: 900px) {
+
+    .contactos-contenido {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contactos-formulario {
+        width: 100%;
+    }
+
+}
+
+
+/* ADAPTACION PARA CELULARES */
+
+@media (max-width: 600px) {
+
+    #contactos {
+        padding: 50px 7%;
+    }
+
+    .contactos-info h3 {
+        font-size: 25px;
+    }
+
+    .contactos-info > p {
+        font-size: 16px;
+    }
+
+    .contacto-dato span {
+        font-size: 16px;
+    }
+
+    .contacto-dato p {
+        font-size: 15px;
+    }
+
+    .contactos-formulario {
+        padding: 22px;
+    }
+
+    .contactos-formulario h3 {
+        font-size: 23px;
+    }
+
+    .contactos-formulario input,
+    .contactos-formulario textarea {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .contactos-formulario button {
+        font-size: 15px;
+    }
+
+}
+
+
+
+/* PIE DE PAGINA */
+
+footer {
+    background-color: #080812;
+    text-align: left;
+    padding: 25px 8%;
+    border-top: 1px solid #713bba;
+}
+
+footer p {
+    color: #aaa4c9;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    margin: 3px 0;
+}
+
+
+/* ADAPTACION PARA TABLETS */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+
+    .sobre-mi-contenido {
+        gap: 30px;
+    }
+
+    .sobre-mi-gif img {
+        width: 280px;
+    }
+
+    .proyecto-imagen video {
+        width: 220px;
+        height: 160px;
+    }
+
+}
+
+
+/* ADAPTACION PARA CELULARES */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 50px 7%;
+    }
+
+    section h2 {
+        font-size: 29px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+
+    /* PRESENTACION */
+
+    #presentacion {
+        min-height: 400px;
+        padding: 50px 7%;
+    }
+
+    #presentacion h2 {
+        font-size: 19px;
+        letter-spacing: 4px;
+    }
+
+    #presentacion h3 {
+        font-size: 42px;
+        letter-spacing: 2px;
+    }
+
+    #presentacion p {
+        font-size: 17px;
+    }
+
+    /* SOBRE MI */
+
+    .sobre-mi-contenido {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .sobre-mi-texto p {
+        font-size: 16px;
+    }
+
+    .sobre-mi-gif {
+        justify-content: center;
+    }
+
+    .sobre-mi-gif img {
+        width: 220px;
+        max-width: 100%;
+    }
+
+    /* PROYECTOS */
+
+    .proyecto {
+        padding: 20px;
+    }
+
+    .proyecto h3 {
+        font-size: 22px;
+    }
+    
+    .proyecto-imagen video {
+        width: 100%;
+        max-width: 280px;
+        height: 180px;
+    }
+
+    /* HABILIDADES */
+
+    #habilidades ul {
+        flex-direction: column;
+    }
+
+    #habilidades li {
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    /* PIE DE PAGINA */
+
+    footer {
+        padding: 20px 7%;
+        text-align: left;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+}
